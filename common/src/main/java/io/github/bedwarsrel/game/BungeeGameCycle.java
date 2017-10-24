@@ -116,11 +116,13 @@ public class BungeeGameCycle extends GameCycle {
       // reset region
       this.getGame().resetRegion();
     }
+    super.onGameEnds();
   }
 
   @Override
   public void onGameLoaded() {
     // Reset on game end
+    super.onGameLoaded();
   }
 
   @Override
@@ -202,6 +204,7 @@ public class BungeeGameCycle extends GameCycle {
   @Override
   public void onGameStart() {
     // do nothing, world will be reseted on restarting
+    super.onGameStart();
   }
 
   @Override
