@@ -102,11 +102,14 @@ public class SingleGameCycle extends GameCycle {
     // set state and with that, the sign
     this.getGame().setState(GameState.WAITING);
     this.getGame().updateScoreboard();
+
+    super.onGameEnds();
   }
 
   @Override
   public void onGameLoaded() {
     // Reset on game end
+    super.onGameLoaded();
   }
 
   @Override

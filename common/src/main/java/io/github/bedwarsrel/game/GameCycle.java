@@ -1,6 +1,6 @@
 package io.github.bedwarsrel.game;
 
-import at.TimoCraft.TimoCloud.api.TimoCloudAPI;
+import cloud.timo.TimoCloud.api.TimoCloudAPI;
 import com.google.common.collect.ImmutableMap;
 import io.github.bedwarsrel.BedwarsRel;
 import io.github.bedwarsrel.events.BedwarsGameOverEvent;
@@ -77,17 +77,17 @@ public abstract class GameCycle {
   }
 
   public void onGameEnds() {
-    TimoCloudAPI.getBukkitInstance().getThisServer().setState("RESTARTING");
+    if (TimoCloudAPI.isEnabled()) TimoCloudAPI.getBukkitInstance().getThisServer().setState("RESTARTING");
   }
 
   public void onGameLoaded() {
-    TimoCloudAPI.getBukkitInstance().getThisServer().setState("LOBBY");
+    if (TimoCloudAPI.isEnabled()) TimoCloudAPI.getBukkitInstance().getThisServer().setState("LOBBY");
   }
 
   public abstract void onGameOver(GameOverTask task);
 
   public void onGameStart() {
-    TimoCloudAPI.getBukkitInstance().getThisServer().setState("INGAME");
+    if (TimoCloudAPI.isEnabled()) TimoCloudAPI.getBukkitInstance().getThisServer().setState("INGAME");
   }
 
   public void onPlayerDies(Player player, Player killer) {

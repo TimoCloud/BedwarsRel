@@ -12,7 +12,7 @@ awareness:
     - !@UTF8
 
 depend: []
-softdepend: [Multiverse-Core, Multiworld, MultiWorld, HolographicDisplays, HologramAPI, UltimateCore]
+softdepend: [Multiverse-Core, Multiworld, MultiWorld, HolographicDisplays, HologramAPI, UltimateCore, TimoCloud]
 
 commands:
     bw:

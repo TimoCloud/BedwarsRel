@@ -742,6 +742,7 @@ public class BedwarsRel extends JavaPlugin {
   public void onEnable() {
     BedwarsRel.instance = this;
 
+    /*
     if (this.getDescription().getVersion().contains("-SNAPSHOT")
         && System.getProperty("IReallyKnowWhatIAmDoingISwear") == null) {
       this.getServer().getConsoleSender().sendMessage(ChatWriter.pluginMessage(ChatColor.RED + "*** Warning, you are using a development build ***"));
@@ -754,7 +755,7 @@ public class BedwarsRel extends JavaPlugin {
         e.printStackTrace();
       }
     }
-
+    */
     this.registerBugsnag();
 
     // register classes
